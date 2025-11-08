@@ -11,6 +11,7 @@ Fuck, it's Python, how well can you really optimise it?
 
 import os
 from converters.image_converter import convert_image
+from converters.video_converter import convert_video
 
 TITLE = r"""
 ·························································
@@ -49,6 +50,22 @@ img_formats = [
 # Make it a tuple cause endswith() only supports str and tuple
 img_formats = tuple(img_formats)
 
+video_formats = [
+    "MP4",
+    "MOV",
+    "M4V",
+    "MKV",
+    "AVI",
+    "WMV",
+    "FLV",
+    "WEBM",
+    "MPEG",
+    "MPG",
+    "GIF"
+]
+
+video_formats = tuple(video_formats)
+
 
 # Function to clear the console.
 def clear_screen():
@@ -68,6 +85,18 @@ def convert_thatshit():
     global message
     message = f"Saved image as: {output_image}"
 
+# Shits copy pasted lmao fuck this
+def convert_thatvideo():
+    input_video = input("Which video do you wanna convert?: ")
+    while not os.path.exists(input_video) or not input_video.upper().endswith(video_formats):
+         input_video = input("File doesn't exist or is invalid. Try again: ")
+    output_video = input("Save video as: ")
+    while os.path.exists(output_video) or not output_video.upper().endswith(video_formats):
+         output_video = input("File already exists OR is not a valid video type! Again: ")
+    convert_video(input_video, output_video)
+    global message
+    message = f"Saved video as: {output_video}"
+
 
 
 # Main function
@@ -77,10 +106,16 @@ def main():
         print(TITLE)
         print("Available Options:")
         print(" 1. Image conversion")
+        print(" 2. Video conversion")
         choice = input("Choose an option: ")
 
         if choice == '1':
             convert_thatshit()
+            clear_screen()
+            print(message)
+            input("Press any key to continue...")
+        elif choice == '2':
+            convert_thatvideo()
             clear_screen()
             print(message)
             input("Press any key to continue...")
