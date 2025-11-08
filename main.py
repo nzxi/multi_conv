@@ -12,14 +12,37 @@ TITLE = r"""
     By nzxi@github
 """
 
+img_formats = [
+    "BMP",
+    "EPS",
+    "GIF",
+    "ICNS",
+    "ICO",
+    "JPEG",
+    "JPEG2000",
+    "MSP",
+    "PCX",
+    "PCD",
+    "TGA",
+    "TIFF",
+    "WEBP",
+    "PNG",
+    "PPM",
+    "PGM",
+    "PBM",
+    "XBM",
+    "XPM"
+]
+
+img_formats = tuple(img_formats)
 
 def clear_screen():
     os.system('cls' if os.name == 'nt' else 'clear')
 
-
-
 def convert_thatshit():
     input_image = input("Which image do you wanna convert?: ")
+    while not os.path.exists(input_image) or not input_image.upper().endswith(img_formats):
+         input_image = input("File doesn't exist or is invalid. Try again: ")
     output_image = input("Save image as: ")
     convert_image(input_image, output_image)
     global message
