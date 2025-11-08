@@ -68,6 +68,8 @@ def convert_thatshit():
     global message
     message = f"Saved image as: {output_image}"
 
+
+
 # Main function
 def main():
     while True:
