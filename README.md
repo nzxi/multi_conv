@@ -1,6 +1,6 @@
 # Multi Conv
 
-Multi Conv is a terminal utility for quickly converting image and video files without fussing with online tools. It wraps Pillow and MoviePy to batch those one-off format changes into a tiny menu-driven CLI.
+Multi Conv is a terminal utility for quickly converting image and video files. It wraps Pillow and MoviePy into a tiny menu-driven CLI.
 
 ## Features
 
