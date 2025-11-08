@@ -50,6 +50,8 @@ def convert_thatshit():
     while not os.path.exists(input_image) or not input_image.upper().endswith(img_formats):
          input_image = input("File doesn't exist or is invalid. Try again: ")
     output_image = input("Save image as: ")
+    while os.path.exists(output_image) or not output_image.upper().endswith(img_formats):
+         output_image = input("File already exists OR is not a valid image type! Again: ")
     convert_image(input_image, output_image)
     # Pure laziness here
     global message
