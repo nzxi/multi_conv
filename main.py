@@ -123,5 +123,6 @@ def main():
              input("Invalid option!\n Press any key to continue...")
 
 # Why am I doing this? Why not just lookup jpeg to png on the internet?
+# To be fair this does convert videos as well so maybe its a bit less useless than I thought it would be
 if __name__ == '__main__':
         main()
