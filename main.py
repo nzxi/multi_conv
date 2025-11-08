@@ -72,6 +72,13 @@ def clear_screen():
     os.system('cls' if os.name == 'nt' else 'clear')
 
 
+# There's a fucking reason why the conversion happens here.
+# Don't try to be smart and move the functions into the modules and make the modules actual modules.
+# That'll break it
+# OR you'll have to place the images in the /converters subfolder
+# Just be a good boy and listen to me
+# Or fuck it just do whatever the fuck pleases your tiny little brain
+
 # Take input image and output image check to see if its all good.
 def convert_thatshit():
     input_image = input("Which image do you wanna convert?: ")
