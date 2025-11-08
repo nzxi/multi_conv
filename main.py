@@ -94,7 +94,8 @@ def convert_thatshit():
 
 # Shits copy pasted lmao fuck this
 # Didn't test this shit probably doesn't work tbh lol
-# 
+# If you get this shit working, can you tell me? I can't bother testing this I spent way too much time on this shit
+# Could've just looked that shit up and converted it online
 def convert_thatvideo():
     input_video = input("Which video do you wanna convert?: ")
     while not os.path.exists(input_video) or not input_video.upper().endswith(video_formats):
