@@ -86,7 +86,7 @@ def convert_thatshit():
     message = f"Saved image as: {output_image}"
 
 # Shits copy pasted lmao fuck this
-# Didn't test this shit probably doesn't 
+# Didn't test this shit probably doesn't w
 def convert_thatvideo():
     input_video = input("Which video do you wanna convert?: ")
     while not os.path.exists(input_video) or not input_video.upper().endswith(video_formats):
