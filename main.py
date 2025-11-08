@@ -4,7 +4,7 @@ by https://github.com/nzxi
 
 This project is absolute shit. I only made it because I needed to convert a jpeg to png
 It functions, so why bother optimise it?
-Fuck it's Python, how well can you really optimise it?
+Fuck, it's Python, how well can you really optimise it?
 
 '''
 
@@ -82,6 +82,8 @@ def main():
             clear_screen()
             print(message)
             input("Press any key to continue...")
+        else:
+             input("Invalid option!\n Press any key to continue...")
 
 # Why am I doing this? Why not just lookup jpeg to png on the internet?
 if __name__ == '__main__':
