@@ -1,3 +1,14 @@
+'''
+MULTI CONV
+by https://github.com/nzxi
+
+This project is absolute shit. I only made it because I needed to convert a jpeg to png
+It functions, so why bother optimise it?
+Fuck it's Python, how well can you really optimise it?
+
+'''
+
+
 import os
 from converters.image_converter import convert_image
 
